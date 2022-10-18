@@ -14,15 +14,30 @@
 
 
 
-class Health{
-    constructor(name,lastTime){
-        this.name = name;
-        this.lastTime = lastTime;
-    }
+// class Health{
+//     constructor(name,lastTime){
+//         this.name = name;
+//         this.lastTime = lastTime;
+//     }
 
-    showHealth(){
-        console.log("안녕하세요."+this.name);
+//     showHealth(){
+//         console.log("안녕하세요."+this.name);
+//     }
+// }
+// const myHealth = new Health("crong");
+// myHealth.showHealth();
+
+
+
+//Object assign 메서드
+const healthObj = {
+    showHealth: function(){
+        console.log("오늘 운동시간"+ this.healthTime);
     }
 }
-const myHealth = new Health("crong");
-myHealth.showHealth();
+const myHealthTime = Object.create(healthObj);
+
+
+console.log(myHealthTime);
+
+
