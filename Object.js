@@ -1,16 +1,28 @@
 
-
-const previousObj ={
-    name: "crong",
-    lastTime: "11:20"  
+const healthObj = {
+    showHealth: function() {
+        console.log("오늘 운동시간:" + this.helthTime);
+    },
+    setHealth: function(newTime){
+        this.helthTime = newTime
+    }
 };
 
-const myHealth = Object.assign({},previousObj, {
-    "lastTime": "12:30",
-    "name": "honux",
-    "age": 99
-});
+const healthChildObj = {
+    getAge: function(){
+        return this.age;
+    }
+}
 
-console.log(myHealth);
+Object.setPrototypeOf(healthChildObj,healthObj);
 
-console.log(previousObj);
+const childObj = Object.setPrototypeOf({
+    age: 22
+}, healthObj);
+
+childObj.setHealth("11:50");
+childObj.setHealth();
+
+
+
+console.log("childobj is ", childObj);
