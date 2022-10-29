@@ -5,7 +5,35 @@
     <meta name="viewport" content="width=device-width">
     
 </head>
-
+<div class="container">
+    
+    <div class="items">
+        item1
+    </div>
+    <div class="items">
+        item2
+    </div>
+    <div class="items">
+        item3
+    </div>
+    <div class="items">
+        item4
+    </div>
+</div>
 
 </html>
 
+<style type="css">
+
+    .container {
+        width: 500px;
+        height: 500px;
+        display: flex
+    }
+
+    .container > .items{
+        flex-direction: column;
+    }
+
+
+</style>
