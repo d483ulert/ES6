@@ -3,10 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
-    
 </head>
 <div class="container">
-    
     <div class="items">
         item1
     </div>
@@ -23,17 +21,20 @@
 
 </html>
 
-<style type="css">
+<style>
 
     .container {
+        display: flex;
         width: 500px;
         height: 500px;
-        display: flex
     }
 
     .container > .items{
-        flex-direction: column;
+        display:flex;
+        width: 25%;
+        height: 20%;
+        border: 1px solid black;
+        align-items: center;
+        justify-content: center;
     }
-
-
 </style>
